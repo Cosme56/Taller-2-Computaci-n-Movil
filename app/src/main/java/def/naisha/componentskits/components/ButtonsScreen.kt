@@ -9,18 +9,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Airplay
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.CloseFullscreen
-import androidx.compose.material.icons.filled.Egg
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Emergency
-import androidx.compose.material.icons.filled.Face
-import androidx.compose.material.icons.filled.Girl
-import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material.icons.filled.Tty
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -77,6 +66,7 @@ fun ButtonsScreen(navController: NavController) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.background(backgroundColor) // Aplica el color de fondo al contenido
             ) {
+                // Los tres primeros iconos permanecen iguales
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
@@ -117,97 +107,113 @@ fun ButtonsScreen(navController: NavController) {
                         modifier = Modifier.size(150.dp)
                     )
                 }
+
+                // Los siguientes iconos han sido cambiados con colores personalizados
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de carrito")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Email,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.Magenta,
+                        imageVector = Icons.Default.AddShoppingCart,
+                        contentDescription = "Icon Add Shopping Cart",
+                        tint = Color(0xFF3E64FF), // Color azul
                         modifier = Modifier.size(150.dp)
                     )
                 }
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de like")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Emergency,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.Blue,
+                        imageVector = Icons.Default.ThumbUp,
+                        contentDescription = "Icon ThumbUp",
+                        tint = Color(0xFFFF4081), // Color rosa
                         modifier = Modifier.size(150.dp)
                     )
                 }
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de alarma")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Airplay,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.LightGray,
+                        imageVector = Icons.Default.Alarm,
+                        contentDescription = "Icon Alarm",
+                        tint = Color(0xFFFFEB3B), // Color amarillo
                         modifier = Modifier.size(150.dp)
                     )
                 }
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de búsqueda")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Egg,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.Cyan,
+                        imageVector = Icons.Default.Search,
+                        contentDescription = "Icon Search",
+                        tint = Color(0xFF4CAF50), // Color verde
                         modifier = Modifier.size(150.dp)
                     )
                 }
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de música")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Tty,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.Unspecified,
+                        imageVector = Icons.Default.MusicNote,
+                        contentDescription = "Icon MusicNote",
+                        tint = Color(0xFF03A9F4), // Color azul claro
                         modifier = Modifier.size(150.dp)
                     )
                 }
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de historia")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Girl,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.Gray,
+                        imageVector = Icons.Default.History,
+                        contentDescription = "Icon History",
+                        tint = Color(0xFF9C27B0), // Color morado
                         modifier = Modifier.size(150.dp)
                     )
                 }
                 IconButton(
                     modifier = Modifier.size(90.dp),
                     onClick = {
-                        println("Soy el primer icono")
+                        println("Soy el icono de casa")
                     }
                 ){
                     Icon(
-                        imageVector = Icons.Default.Lock,
-                        contentDescription = "Icon CheckCircle",
-                        tint = Color.Yellow,
+                        imageVector = Icons.Default.Home,
+                        contentDescription = "Icon Home",
+                        tint = Color(0xFFFFC107), // Color ámbar
                         modifier = Modifier.size(150.dp)
                     )
                 }
+                IconButton(
+                    modifier = Modifier.size(90.dp),
+                    onClick = {
+                        println("Soy el icono de configuración")
+                    }
+                ){
+                    Icon(
+                        imageVector = Icons.Default.Settings,
+                        contentDescription = "Icon Settings",
+                        tint = Color(0xFF8BC34A), // Color verde
+                        modifier = Modifier.size(150.dp)
+                    )
+                }
+
                 ElevatedButton(
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Red
